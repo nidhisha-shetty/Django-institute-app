@@ -1,0 +1,60 @@
+
+<!doctype html>
+<html>
+<head>
+	<title>College</title>
+	<meta charset="utf-8" />
+	{% load staticfiles  %}
+	<link rel="stylesheet" href="{% static '/css/bootstrap.min.css' %}" type='text/css'/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+<body class="body" >
+	<div class="container-fluid" style="background-color:#6FA8DC" >
+
+	<h1><p align="center"> Welcome to Python classes </p> </h1>
+	<center>
+		<img src="{% static 'img/python_logo.jpg' %}" class="responsive-img" style='max-height:100px;' alt="face">
+	</center>
+	
+</div>
+
+
+
+
+	<div class="container-fluid" style="min-height:95%;" >
+		<div class="row">
+			  <div class="col-sm-2">
+				  <br>
+				  
+			  </div>
+			  <div class="col-sm-10">
+				  <br>
+				 
+			  </div>
+		</div><hr>
+
+
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+		
+			  
+				{% block content %} 
+			    {% endblock %}	
+			  
+		<!--well bs-sidebar affix-->
+	</div>
+	
+
+
+</body>
+</html>

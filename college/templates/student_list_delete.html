@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+<p>Hello, {{user.first_name}} </p>   <p align="right"><a href="/logout">Logout</a></p>
+
+<!-- #request.user or user.username can be used to retrieve username of person logged in -->
+
+
+{% block content %}
+
+{% for x in object %}
+
+	<!-- <p>{{ x.id }} -- <a href="{{ x.get_absolute_url_delete}}"> {{ x.Student_Name }} </a></p> -->
+
+<p> <a href="{{ x.get_absolute_url_delete}}"> {{ x.Student_Name }} </a></p>
+
+{% endfor %}
+
+
+
+
+
+<!-- {{ object.Student_Rollno}}
+{{ object.Student_Name}}
+{{ object.Student_Class}}  -->
+
+{% endblock %}
+

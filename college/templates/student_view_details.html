@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style type="text/css">
+	.p serif{
+    	font-family: "Times New Roman", Times, serif;
+	}
+</style>
+<h3><p align="center"> Student list</p></h3><br/>
+{% for x in object %}
+<li>
+	<u>
+		{{ x.Student_Name }}
+	</u>
+	<a href="{{ x.get_absolute_url }}">
+		<p class="serif"><button type="button" class="btn btn-primary btn-sm"> View details </button></p>
+	</a>
+		
+		 <br/>
+</li>
+
+
+{% endfor %}
+<a href="/">
+		<p align="center" class="serif"><button type="button" class="btn btn-primary btn-warning"> Home page </button></p>
+	</a
+{% endblock %}

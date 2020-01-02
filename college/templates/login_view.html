@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+<!-- 
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Login</title>
+</head>
+<body>
+	<div>
+		
+
+		{% for message in messages %}
+		<h3 style="color: green;"> {{message}} </h3>
+		{% endfor %}
+
+	</div>
+	<form method="POST" action="."> {% csrf_token %}
+		<h1><p align="center">Login Page</p></h1><br/>
+
+		<input type="text" name="username_l" placeholder="Enter username"><br/>
+
+		<input type="password" name="password_l" placeholder="Enter password"><br/>
+
+		<input type="Submit" value="Save" >
+		
+	</form>
+	
+
+</body>
+</html> -->
+
+
+{% block content %}
+
+<div>
+		
+
+		{% for message in messages %}
+			<h3 style="color: red;"> {{message}} </h3>
+		{% endfor %}
+
+	</div>
+
+	
+	<form method="POST" action="."> {% csrf_token %}
+		<h1><p align="center">Login Page</p></h1><br/>
+
+		Username: <input type="text" name="username_l" placeholder="Enter username"><br/><br/>
+
+		Password: <input type="password" name="password_l" placeholder="Enter password"><br/><br/>
+
+		<input type="Submit" value="Login" button type="button" class="btn btn-primary ">
+		<a href="/"> <button type="button" class="btn btn-primary "> Home page </button>
+	</a>
+	</form>
+
+{% endblock %}

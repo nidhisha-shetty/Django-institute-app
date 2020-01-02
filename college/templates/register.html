@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+<!doctype html>
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Registration</title>
+</head>
+<body>
+	<form method="POST" action="."> {% csrf_token %}
+		
+		<H1> <p align="center"> Registration page</p></H1><br/>
+		<div>
+		
+			{%	for message in messages %}
+
+				<h3 style="color: red;"> {{message}} </h3>
+
+			{% endfor %}
+
+		</div>
+		Username: <input type="text" name="username" placeholder="Enter username"><br/><br/>
+		Password: <input type="password" name="password" placeholder="Enter password"><br/><br/>
+		Confirm password: <input type="password" name="confirm password" placeholder="Re-Enter password"><br/><br/>
+		First name: <input type="text" name="first_name" placeholder="Enter first name"><br/><br/>
+		Last name: <input type="text" name="last_name" placeholder="Enter last name"><br/>	<br/>
+		Email: <input type="email" name="email" placeholder="Enter email"><br/><br/><br/>
+		<input type="submit" value="Save" button type="button" class="btn btn-primary" >
+		<a href="/home/"> <button type="button" class="btn btn-primary">Go back</button></a>
+	</form>
+	
+
+
+</body>
+</html>
+
+{% endblock %}

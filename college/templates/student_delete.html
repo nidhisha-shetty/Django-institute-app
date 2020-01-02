@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<form action="." method="POST">{% csrf_token %}
+	<h5>Are you sure you want to delete "{{ object.Student_Name}}" details?</h5>
+	<input type="submit" value="Yes" button type="button" class="btn btn-secondary btn-sm"/>
+	<a href="http://127.0.0.1:8000/student/"><button type="button" class="btn btn-secondary btn-sm"> Cancel</button></a>
+</form>
+
+
+
+{% endblock %}
+

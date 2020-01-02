@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<form method="POSt"> {% csrf_token%}
+	
+	{{form.as_p}}
+
+	<input type="Submit" value="Save" button type="button" class="btn btn-primary" />
+	<a href="http://127.0.0.1:8000/home/"><button type="button" class="btn btn-primary">Back</button></a></p>
+
+
+</form>
+
+{% endblock %}
+

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+<!-- #request.user or user.username can be used to retrieve username of person logged in -->
+
+
+{% block content %}
+<!-- p>Hello, {{user.first_name}} </p>   <p align="right"><a href="/logout">Logout</a></p>
+ -->
+ <h3><p class="serif">Hi, {{request.user}}</p></h3>
+<p align="right"><b><a href="/logout"><button type="button" class="btn btn-primary btn-sm">Logout</button></a></b></p>
+{% for x in object %}
+
+<!-- 	<p>{{ x.id }} -- <a href="{{ x.get_absolute_url }}"> {{ x.Student_Name }} </a></p>
+ -->
+ 	<u>{{ x.Student_Name }}</u><br/>
+	<a href="{{ x.get_absolute_url }}"><button type="button" class="btn btn-primary"> View details </button></a> &nbsp; &nbsp;
+	<!-- <p> <a href="{{ x.get_absolute_url_delete}}"> Edit {{ x.Student_Name }} </a></p> -->
+	<a href="{{ x.get_absolute_url_delete}}"><button type="button" class="btn btn-primary"> Delete </button> </a> &nbsp;	&nbsp;
+	<!-- <p> <a href="{{ x.get_absolute_url_edit}}">  {{ x.Student_Name }} </a></p> -->
+	<a href="{{ x.get_absolute_url_edit}}"><button type="button" class="btn btn-primary">  Edit</button> </a><br/><br/>
+
+{% endfor %}
+
+
+<p align="center"><a href="/home/"><button type="button" class="btn btn-primary btn-warning">  Go back </button> </a></p><br/><br/>
+	
+
+
+<!-- {{ object.Student_Rollno}}
+{{ object.Student_Name}}
+{{ object.Student_Class}}  -->
+
+{% endblock %}
+
